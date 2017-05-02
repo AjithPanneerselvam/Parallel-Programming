@@ -18,8 +18,7 @@ class BankAccount(threading.Thread):
     @staticmethod
     def getMoney(customer):
         print("{} tries to withdraw ${} at {}".format(customer.name,
-
-        customer.moneyRequest,time.strftime("%H: %M: %S",time.gmtime())))
+            customer.moneyRequest,time.strftime("%H: %M: %S",time.gmtime())))
 
         if BankAccount.accBalance - customer.moneyRequest > 0:
             BankAccount.accBalance -= customer.moneyRequest
